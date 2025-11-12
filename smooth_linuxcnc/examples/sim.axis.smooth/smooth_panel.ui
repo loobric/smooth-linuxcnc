@@ -36,6 +36,30 @@
             <property name="position">1</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkButton" id="backup_button">
+            <property name="label" translatable="yes">Backup Tool Table</property>
+            <property name="visible">True</property>
+            <signal name="clicked" handler="on_backup_button_click" after="yes"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="pull_button">
+            <property name="label" translatable="yes">Pull Tool Table</property>
+            <property name="visible">True</property>
+            <signal name="clicked" handler="on_pull_button_click" after="yes"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>
