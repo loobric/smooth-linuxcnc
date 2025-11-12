@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.24"/>
+  <object class="GtkWindow" id="window1">
+    <property name="width_request">200</property>
+    <property name="height_request">100</property>
+    <property name="title" translatable="yes">Smooth Panel</property>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="spacing">10</property>
+        <property name="border_width">10</property>
+        <child>
+          <object class="GtkButton" id="toggle_button">
+            <property name="label" translatable="yes">Toggle LED</property>
+            <property name="visible">True</property>
+            <signal name="pressed" handler="on_button_press" after="yes"/>
+            <signal name="released" handler="on_button_release" after="yes"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="led">
+            <property name="visible">True</property>
+            <property name="label">LED</property>
+            <property name="width-request">50</property>
+            <property name="height-request">30</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
